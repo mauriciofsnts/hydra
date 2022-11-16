@@ -15,6 +15,12 @@ registerApplication({
   activeWhen: ['/react-single'],
 })
 
+registerApplication({
+  name: '@hydra/react-multiples',
+  app: () => System.import<LifeCycles>('@hydra/react-multiples'),
+  activeWhen: ['/react-multiples'],
+})
+
 // registerApplication({
 //   name: "@hydra/navbar",
 //   app: () => System.import("@hydra/navbar"),
