@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const App: React.FC<any> = ({ name }) => {
   const [tasks, updateTasks] = useState([])
+
+  useEffect(() => {
+    window.addEventListener('@hydra/react-route/todo/add-task', (e: any) => {
+      updateTasks((prev) => [...prev, e.detail])
+    })
+  }, [])
 
   return (
     <>

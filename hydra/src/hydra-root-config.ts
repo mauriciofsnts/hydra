@@ -15,11 +15,14 @@ registerApplication({
   activeWhen: (location: Location) => location.pathname === '/react-single',
 })
 
+// /react-single
 registerApplication({
   name: '@hydra/react-multiples',
   app: () => System.import<LifeCycles>('@hydra/react-multiples'),
   activeWhen: ['/react-multiples'],
 })
+
+// /react-multiples/home
 
 registerApplication({
   name: '@hydra/react-parcel',
