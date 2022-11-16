@@ -21,6 +21,12 @@ registerApplication({
   activeWhen: ['/react-multiples'],
 })
 
+registerApplication({
+  name: '@hydra/react-parcel',
+  app: () => System.import<LifeCycles>('@hydra/react-parcel'),  
+  activeWhen: (location: Location) => location.pathname === '/react-parcel',
+})
+
 // registerApplication({
 //   name: "@hydra/navbar",
 //   app: () => System.import("@hydra/navbar"),
