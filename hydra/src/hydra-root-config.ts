@@ -12,7 +12,7 @@ registerApplication({
 registerApplication({
   name: '@hydra/react-single',
   app: () => System.import<LifeCycles>('@hydra/react-single'),
-  activeWhen: ['/react-single'],
+  activeWhen: (location: Location) => location.pathname === '/react-single',
 })
 
 registerApplication({
