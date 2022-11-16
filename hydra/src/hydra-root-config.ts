@@ -27,6 +27,12 @@ registerApplication({
   activeWhen: (location: Location) => location.pathname === '/react-parcel',
 })
 
+registerApplication({
+  name: '@hydra/react-route',
+  app: () => System.import<LifeCycles>('@hydra/react-route'),  
+  activeWhen: (location: Location) => location.pathname === '/react-route',
+})
+
 // registerApplication({
 //   name: "@hydra/navbar",
 //   app: () => System.import("@hydra/navbar"),
